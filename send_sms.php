@@ -18,7 +18,7 @@ $headers[] = 'Authorization: Basic'.base64_encode("$username:$password");
 $headers[] = 'Content-Type: application/json';
 $headers[] = 'x-apikey:' .$api_key;
 
-curl_setopt($ch, CURL_HTTPHEADER, $headers)
+curl_setopt($ch, CURL_HTTPHEADER, $headers);
 $result = curl_exec($ch);
 
 if (curl_errno($ch)) {
